@@ -78,6 +78,33 @@
       margin-bottom: 15px;
       border-radius: 5px;
     }
+    .counter-section {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 40px;
+      height: 180px;
+    }
+    .counter-section .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00587A;
+    }
+    .counter-section .label {
+      font-size: 1rem;
+      color: #333;
+    }
+    .counter-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: -40px;
+    }
+    .counter-box {
+      flex: 1 1 150px;
+      min-width: 140px;
+    }
     .footer {
       background-color: #003f5c;
       color: #fff;
@@ -146,40 +173,38 @@
 </section>
 
 <!-- Project Counter Section -->
-<section class="section bg-light" id="counter" >
-  <div class="container-fluid text-center" style="margin-top: -60px;" >
-    <h2 class="section-title">Projects Completed Successfully</h2>
-    <div class="row" style="margin-top: -40px;font-size: 1rem;">
-      <div class="col-md-2" data-aos="fade-up">
-        <h2 class="counter" data-target="400">0</h2>
-        <p>Projects</p>
-      </div>
-      <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="counter" data-target="350000">0</h2>
-        <p>Inch-Size Thermoplastic Joints</p>
-      </div>
-      <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="counter" data-target="275000">0</h2>
-        <p>Thermoplastic Pipe Meter</p>
-      </div>
-      <div class="col-md-2" data-aos="fade-up">
-        <h2 class="counter" data-target="190000">0</h2>
-        <p>Plastic inch Joints</p>
-      </div>
-      <div class="col-md-2" data-aos="fade-up">
-        <h2 class="counter" data-target="150000">0</h2>
-        <p>Plastic inch Meter</p>
-      </div>
-      <div class="col-md-2" data-aos="fade-up">
-        <h2 class="counter" data-target="15">0</h2>
-        <p>Years of Experience</p>
+  <div class="counter-section" style="margin-top: -40px;">
+      <h2 class="section-title">Projects Completed Successfully</h2>
+      <div class="counter-row" >
+        <div class="counter-box">
+          <div class="counter" data-target="400">0</div>
+          <div class="label">Projects</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter" data-target="350000">0</div>
+          <div class="label">Inch-Size Thermoplastic Joints</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter" data-target="275000">0</div>
+          <div class="label">Thermoplastic Pipe Meter</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter" data-target="190000">0</div>
+          <div class="label">Plastic Inch Joints</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter" data-target="150000">0</div>
+          <div class="label">Plastic Inch Meter</div>
+        </div>
+        <div class="counter-box">
+          <div class="counter" data-target="15">0</div>
+          <div class="label">Years of Experience</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
 <!-- Services Section -->
-<section id="services" class="section bg-light" style="margin-top: -80px;">
+<section id="services" class="section bg-light" style="margin-top: -10px;">
   <div class="container-fluid" style="margin-top: -60px;">
     <h2 class="section-title text-center">Our Services</h2>
     <div class="row text-center" style="margin-top: -40px;">
@@ -367,18 +392,18 @@
 <script>
   AOS.init();
   const counters = document.querySelectorAll('.counter');
-const speed = 200; // lower is faster
+  const speed = 200; // The lower the value, the faster the count
 
-  const runCounter = () => {
+  const runCounters = () => {
     counters.forEach(counter => {
       const updateCount = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
-        const inc = target / speed;
+        const increment = target / speed;
 
         if (count < target) {
-          counter.innerText = Math.ceil(count + inc);
-          setTimeout(updateCount, 20);
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
         } else {
           counter.innerText = target;
         }
@@ -387,16 +412,18 @@ const speed = 200; // lower is faster
     });
   };
 
-  // Trigger only once when visible
-  let executed = false;
+  let triggered = false;
   window.addEventListener('scroll', () => {
-    const section = document.getElementById('counter');
-    const position = section.getBoundingClientRect().top;
-    if (position < window.innerHeight && !executed) {
-      runCounter();
-      executed = true;
+    const section = document.querySelector('.counter-section');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (!triggered && sectionTop < windowHeight) {
+      runCounters();
+      triggered = true;
     }
   });
+
 </script>
 </body>
 </html>
