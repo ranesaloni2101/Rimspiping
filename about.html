@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Piping Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: #00587A;
+    }
+    .navbar.sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #F2A007;
+    }
+    .hero {
+      background: #00587A;
+      color: white;
+      padding: 0;
+      text-align: center;
+    }
+    .carousel-item {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .carousel-caption {
+      top: 1%;
+    }
+    .carousel-caption h1, .carousel-caption p {
+      background-color: rgba(3, 3, 3, 0.504);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    #about { background-color: #fefefe; }
+    #services { background-color: #f7f9fc; }
+    #testimonials { background-color: #fff; }
+    #clients { background-color: #f1f5f9; }
+    #gallery { background-color: #ffffff; }
+    #contact { background-color: #f7f7f7; }
+
+    .section-title {
+      color: #00587A;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+      color: #333;
+    }
+    .testimonial, .client-logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .gallery-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .footer {
+      background-color: #003f5c;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .value-list li { list-style-type: none; margin: 5px 0; }
+    .gallery-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .about-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#industries">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="#counter">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Client</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Project Counter Section -->
+<section class="section bg-light" id="counter" >
+  <div class="container-fluid text-center" style="margin-top: -60px;" >
+    <h2 class="section-title">Projects Completed Successfully</h2>
+    <div class="row" style="margin-top: -40px;font-size: 1rem;">
+      <div class="col-md-2" data-aos="fade-up">
+        <h2 class="counter" data-target="400">0</h2>
+        <p>Projects</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="counter" data-target="350000">0</h2>
+        <p>Inch-Size Thermoplastic Joints</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="counter" data-target="275000">0</h2>
+        <p>Thermoplastic Pipe Meter</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up">
+        <h2 class="counter" data-target="190000">0</h2>
+        <p>Plastic inch Joints</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up">
+        <h2 class="counter" data-target="150000">0</h2>
+        <p>Plastic inch Meter</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid" style="margin-top: -80px;">
+    <h1 class="section-title">About Us</h1>
+
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-5 mb-3 mb-md-0" data-aos="fade-right">
+        <img src="pipecable.jpg" alt="Company Facility" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7" data-aos="fade-left">
+        <h2 class="section-title">Who We Are</h2>
+        <p>
+          Our company is the result of a powerful collaboration between two well-established firms with rich industry heritage, one founded in 1994 and the other in 2003. With over two decades of combined expertise in piping installation and tank fabrication, we bring unmatched experience, precision, and dedication to every project we undertake.
+        </p>
+        <p>
+          As one of the fastest-growing names in the fabrication and service industry, we specialize in the supply and installation of premium-quality plastic and thermoplastic piping systems. Our offerings include PP, PPH, and HDPE chemical storage tanks, piping grids, and a wide range of installation services tailored to various industrial needs.
+        </p>
+        <p>
+          We are committed to delivering industry-compliant, reliable, and high-performance solutions. Our product range features cutting-edge jointing technologies such as <strong>Socket Fusion, Butt Fusion, Electro-Fusion, IR Fusion</strong>, and <strong>BCF</strong> – ensuring long-lasting, leak-proof connections and system integrity.
+        </p><br>
+      </div>
+    </div>
+<p>
+          With a robust workforce of over <strong>110 professionals</strong> – including engineers, managers, CAD designers, and skilled technicians – we bring a combined experience of more than <strong>800 years</strong> to the table. Our certified welders and experienced tradespeople have been instrumental in planning, designing, supplying, and commissioning piping systems for diverse process and electromechanical industries, both domestically and internationally.
+        </p>
+        <p>
+          From a humble beginning over 13 years ago, our company has steadily evolved into a leading provider of non-metallic piping solutions. Our growth is driven by a deep understanding of market dynamics, a strong focus on quality, and a commitment to customer satisfaction.
+        </p>
+        <p>
+          At our core, we believe in building long-term partnerships through excellence, trust, and innovation.
+        </p>
+    <!-- Image Gallery Row -->
+    <div class="row mb-5 text-center">
+      <div class="col-md-4">
+        <img src="gallery1.jpg" alt="Gallery Image 1" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="gallery2.jpg" alt="Gallery Image 2" class="gallery-img">
+      </div>
+      <div class="col-md-4">
+        <img src="gallery3.jpg" alt="Gallery Image 3" class="gallery-img">
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h4>Our Mission</h4>
+        <p>To deliver reliable, innovative, and sustainable plastic piping solutions that empower industries to operate safely and efficiently.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Our Vision</h4>
+        <p>To be the most trusted partner in industrial piping by setting benchmarks in quality, service, and environmental responsibility.</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Our Values</h4>
+        <ul class="value-list">
+          <li>✔ Integrity & Transparency</li>
+          <li>✔ Customer-Centric Approach</li>
+          <li>✔ Commitment to Safety</li>
+          <li>✔ Innovation & Excellence</li>
+          <li>✔ Sustainability & Responsibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; All rights reserved.</p>
+    <p>Designed by Saloni Rane | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  const counters = document.querySelectorAll('.counter');
+const speed = 200; // lower is faster
+
+  const runCounter = () => {
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  // Trigger only once when visible
+  let executed = false;
+  window.addEventListener('scroll', () => {
+    const section = document.getElementById('counter');
+    const position = section.getBoundingClientRect().top;
+    if (position < window.innerHeight && !executed) {
+      runCounter();
+      executed = true;
+    }
+  });
+</script>
+</body>
+</html>
