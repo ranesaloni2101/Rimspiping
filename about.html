@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>About us | Rimspiping</title>
+  <title>Piping Web</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -52,55 +52,82 @@
       text-align: center;
     }
     .value-list li { list-style-type: none; margin: 5px 0; }
-    .about-card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    .about-wrapper {
+      position: relative;
+      background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+      padding: 40px 0;
+      overflow: hidden;
     }
+
+    .about-wrapper::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,88,122,0.1), transparent 70%);
+      border-radius: 50%;
+      top: -150px;
+      left: -150px;
+      z-index: 0;
+    }
+    .about-wrapper::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(242,160,7,0.1), transparent 70%);
+      border-radius: 50%;
+      bottom: -100px;
+      right: -100px;
+      z-index: 0;
+    }
+
     .about-section {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
+      justify-content: space-between;
       gap: 30px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+    }
+    .about-section .image-container {
+      flex: 1 1 40%;
+      text-align: center;
+      position: relative;
+    }
+    .about-section .image-container::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle at center, #d9f0f5, #fff);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
     }
     .about-section img {
-      flex: 1 1 45%;
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
     }
-    .about-section .about-card {
-      flex: 1 1 45%;
-    }
-    .collapse-btn {
-      background: none;
-      border: none;
-      color: #00587A;
-      text-decoration: underline;
-      cursor: pointer;
-      margin-top: 10px;
+    .about-section .content {
+      flex: 1 1 55%;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
     }
     .row-cols-md-3 > div {
       margin-bottom: 30px;
-    }
-    .gallery-slider {
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 40px;
-    }
-    .gallery-track {
-      display: flex;
-      animation: slide 30s linear infinite;
-    }
-    .gallery-img {
-      width: 100%;
-      max-width: 300px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      margin-right: 20px;
     }
     @keyframes slide {
       0% { transform: translateX(0); }
@@ -208,23 +235,17 @@
 <div class="container-fluid" id="a1" style="margin-top: -70px;">
     <h1 class="section-title">About Us</h1>
 
-    <div class="row mb-5 align-items-center" style="margin-top: -60px;">
-      <div class="col-md-5 mb-3 mb-md-0" data-aos="fade-right">
-        <img src="pipecable.jpg" alt="Company Facility" class="img-fluid rounded shadow" style="margin-top: 20px;">
+    <div class="about-section">
+        <div class="image-container">
+          <img src="image.jpeg" alt="Our Company">
+        </div>
+        <div class="content">
+          <h2 class="h4 text-primary mb-3">Who We Are</h2>
+          <p>Our company is the result of a powerful collaboration between two well-established firms, one founded in 1994 and the other in 2003. With over two decades of combined expertise in piping installation and tank fabrication, we bring unmatched experience, precision, and dedication to every project.</p>
+          <p>We specialize in the supply and installation of premium-quality plastic and thermoplastic piping systems including PP, PPH, and HDPE tanks and piping grids, tailored to industrial needs.</p>
+          <p>Our advanced jointing technologies—Socket Fusion, Butt Fusion, Electro-Fusion, IR Fusion, and BCF—ensure leak-proof and high-integrity systems.</p>
+        </div>
       </div>
-      <div class="col-md-7" data-aos="fade-left">
-        <h2 class="section-title" style="margin-top: 20px;">Who We Are</h2>
-        <p>
-          Our company is the result of a powerful collaboration between two well-established firms with rich industry heritage, one founded in 1994 and the other in 2003. With over two decades of combined expertise in piping installation and tank fabrication, we bring unmatched experience, precision, and dedication to every project we undertake.
-        </p>
-        <p>
-          As one of the fastest-growing names in the fabrication and service industry, we specialize in the supply and installation of premium-quality plastic and thermoplastic piping systems. Our offerings include PP, PPH, and HDPE chemical storage tanks, piping grids, and a wide range of installation services tailored to various industrial needs.
-        </p>
-        <p>
-          We are committed to delivering industry-compliant, reliable, and high-performance solutions. Our product range features cutting-edge jointing technologies such as <strong>Socket Fusion, Butt Fusion, Electro-Fusion, IR Fusion</strong>, and <strong>BCF</strong> – ensuring long-lasting, leak-proof connections and system integrity.
-        </p><br>
-      </div>
-    </div>
         <p>
           With a robust workforce of over <strong>110 professionals</strong> – including engineers, managers, CAD designers, and skilled technicians – we bring a combined experience of more than <strong>800 years</strong> to the table. Our certified welders and experienced tradespeople have been instrumental in planning, designing, supplying, and commissioning piping systems for diverse process and electromechanical industries, both domestically and internationally.
         </p>
@@ -255,18 +276,6 @@
           <li>✔ Innovation & Excellence</li>
           <li>✔ Sustainability & Responsibility</li>
         </ul>
-      </div>
-    </div>
-    <!-- Image Gallery Slider -->
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery-slider">
-      <div class="gallery-track">
-        <img src="cylindrical.jpg" class="gallery-img" alt="Gallery Image 1">
-        <img src="energy-supply-system.jpg" class="gallery-img" alt="Gallery Image 2">
-        <img src="interior-pipe-lines.jpg" class="gallery-img" alt="Gallery Image 3">
-        <img src="pipelines.jpg" class="gallery-img" alt="Gallery Image 4">
-        <img src="steel-pipe.jpg  " class="gallery-img" alt="Gallery Image 5">
-        <img src="steel-pipelines.jpg" class="gallery-img" alt="Gallery Image 6">
       </div>
     </div>
   </div>
