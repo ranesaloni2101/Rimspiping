@@ -43,6 +43,26 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .services-tabs .nav-link {
+  color: #31708f;  /* Bootstrap panel-info text color */
+  border: 1px solid #bce8f1;
+  margin-right: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.services-tabs .nav-link:hover {
+  background-color: #d9edf7; /* panel-info background color */
+  color: #23527c;
+}
+
+.services-tabs .nav-link.active {
+  background-color: #31708f;
+  color: #fff;
+  border-color: #31708f;
+}
+
+
     footer {
       background-color: #003f5c;
       color: #fff;
@@ -63,7 +83,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Website</a>
+    <a class="navbar-brand" href="#">Rimspiping</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -89,10 +109,10 @@
   <div class="row mb-4">
     <!-- Main Image -->
     <div class="col-md-4">
-      <img src="socket.jpg" alt="Socket Fusion Jointing" class="service-img">
+      <img src="Socket-Fusion-Jointing.jpg" alt="Socket Fusion Jointing" class="service-img">
     </div>
     <!-- Description -->
-    <div class="col-md-8">
+    <div class="col-md-8" >
       <p>
         <b>Socket Fusion Jointing</b> is a highly reliable method for joining pipes, ensuring durable, leak-proof, and long-lasting connections. We have marked a distinct position in the market by providing <b>Socket Fusion Jointing Services</b>. These services are delivered by our skilled professionals who have extensive experience and perform the tasks in line with market standards. 
         <br><br>
@@ -101,70 +121,35 @@
     </div>
   </div>
 
-  <!-- Tables Section -->
-  <div class="row" style="margin-top: -100px;">
-    <div class="col-md-9">
-      <div class="panel-heading">Other Details</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Reliable service</td></tr>
-          <tr><td>Carried out with precision</td></tr>
-          <tr><td>Complete satisfaction of customers</td></tr>
-        </tbody>
-      </table>
+  
 
-      <div class="panel-heading">Fields of Application</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Gas and water distribution</td></tr>
-          <tr><td>Industrial applications</td></tr>
-          <tr><td>Building technology</td></tr>
-        </tbody>
-      </table>
-
-      <div class="panel-heading">Advantages</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Safe and easy jointing</td></tr>
-          <tr><td>Short fusion time</td></tr>
-        </tbody>
-      </table>
-
-      <div class="panel-heading">Range</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Manual: up to d110</td></tr>
-          <tr><td>Mechanical: d20 to d140</td></tr>
-        </tbody>
-      </table>
-
-      <div class="panel-heading">Materials</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>PP</td></tr>
-          <tr><td>PE</td></tr>
-          <tr><td>PVDF</td></tr>
-          <tr><td>PB</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="col-md-3">
-      <div class="panel panel-info">
-        <div class="panel-heading">Explore Other Services</div>
-        <div class="list-group">
-          <a href="Butt_Fusion.html" class="list-group-item">Butt Fusion Jointing Services</a>
-          <a href="socket_fusion.html" class="list-group-item active">Socket Fusion Jointing</a>
-          <a href="electro_fusion.html" class="list-group-item">Electro Fusion Jointing</a>
-          <a href="infrared_fusion.html" class="list-group-item">Infrared Welding Services</a>
-          <a href="solvent_cementing.html" class="list-group-item">Solvent Cementing Services</a>
-          <a href="bead.html" class="list-group-item">Bead and Crevice Free Jointing</a>
-        </div>
-      </div>
-    </div>
+    <!-- Horizontal Tabs for Services -->
+<div class="col-md-12" style="margin-top: -45px;">
+  <div class="panel panel-info">
+    <div class="panel-heading text-center">Explore Other Services</div>
+    <ul class="nav nav-tabs justify-content-center services-tabs">
+      <li class="nav-item">
+        <a class="nav-link" href="Butt_Fusion.html">Butt Fusion Jointing Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="socket_fusion.html">Socket Fusion Jointing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="electro_fusion.html">Electro Fusion Jointing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="infrared_fusion.html">Infrared Welding Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="solvent_cementing.html">Solvent Cementing Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bead.html">Bead and Crevice Free Jointing</a>
+      </li>
+    </ul>
   </div>
 </div>
+
 
 <!-- Footer -->
 <footer>

@@ -43,6 +43,25 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .services-tabs .nav-link {
+  color: #31708f;  /* Bootstrap panel-info text color */
+  border: 1px solid #bce8f1;
+  margin-right: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.services-tabs .nav-link:hover {
+  background-color: #d9edf7; /* panel-info background color */
+  color: #23527c;
+}
+
+.services-tabs .nav-link.active {
+  background-color: #31708f;
+  color: #fff;
+  border-color: #31708f;
+}
+
     footer {
       background-color: #003f5c;
       color: #fff;
@@ -63,7 +82,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Website</a>
+    <a class="navbar-brand" href="#">Rimspiping</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -89,7 +108,7 @@
   <div class="row mb-4">
     <!-- Main Image -->
     <div class="col-md-5">
-      <img src="butt fusion.jpg" alt="Butt Fusion Jointing" class="service-img">
+      <img src="Butt-Fusion-Jointing.jpg" alt="Butt Fusion Jointing" class="service-img">
     </div>
     <!-- Description -->
     <div class="col-md-7">
@@ -100,55 +119,34 @@ With a focus on <b>safety</b>, <b>cost-effectiveness</b>, and <b>reliability</b>
     </div>
   </div>
 
-  <!-- Tables Section -->
-  <div class="row" style="margin-top: -100px;">
-    <div class="col-md-9">
-      <div class="panel-heading">Other Details</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Executed by experts</td></tr>
-          <tr><td>Total client contentment</td></tr>
-          <tr><td>Cost effective</td></tr>
-        </tbody>
-      </table>
 
-      <div class="panel-heading">Fields of Application</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Universal use</td></tr>
-          <tr><td>Water & gas distribution</td></tr>
-          <tr><td>Industrial construction site</td></tr>
-          <tr><td>Workshop</td></tr>
-          <tr><td>Building technology</td></tr>
-        </tbody>
-      </table>
-
-      <div class="panel-heading">Advantages</div>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><td>Short-time jointing preparation</td></tr>
-          <tr><td>High jointing strength</td></tr>
-          <tr><td>Economical</td></tr>
-          <tr><td>Perfectly suitable for big dimensions</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Sidebar -->
-    <div class="col-md-3">
-      <div class="panel panel-info">
-        <div class="panel-heading">Explore Other Services</div>
-        <div class="list-group">
-          <a href="Butt_Fusion.html" class="list-group-item active">Butt Fusion Jointing Services</a>
-          <a href="socket_fusion.html" class="list-group-item">Socket Fusion Jointing</a>
-          <a href="electro_fusion.html" class="list-group-item">Electro Fusion Jointing</a>
-          <a href="infrared_fusion.html" class="list-group-item">Infrared Welding Services</a>
-          <a href="solvent_cementing.html" class="list-group-item">Solvent Cementing Services</a>
-          <a href="bead.html" class="list-group-item">Bead and Crevice Free Jointing</a>
-        </div>
-      </div>
-    </div>
+    <!-- Horizontal Tabs for Services -->
+<div class="col-md-12">
+  <div class="panel panel-info">
+    <div class="panel-heading text-center">Explore Other Services</div>
+    <ul class="nav nav-tabs justify-content-center services-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="Butt_Fusion.html">Butt Fusion Jointing Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="socket_fusion.html">Socket Fusion Jointing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="electro_fusion.html">Electro Fusion Jointing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="infrared_fusion.html">Infrared Welding Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="solvent_cementing.html">Solvent Cementing Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bead.html">Bead and Crevice Free Jointing</a>
+      </li>
+    </ul>
   </div>
+</div>
+
 </div>
 
 <!-- Footer -->
