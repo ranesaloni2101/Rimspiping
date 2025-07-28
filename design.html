@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Design & Engineering - Custom Piping Systems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: #00587A;
+    }
+    .navbar.sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #F2A007;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url(pipe.jpg) center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+      height: 250px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      margin-top: -50px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      background: #ff6600;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .hero a:hover {
+      background: #e55a00;
+    }
+.row-cols-md-3 > div {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+      .row-cols-md-3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .row-cols-md-3 > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .counter-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero h1{
+        font-size: 2rem;
+      }
+    }
+    .counter-section {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 0px;
+    }
+    .counter-section .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00587A;
+    }
+    .counter-section .label {
+      font-size: 1rem;
+      color: #333;
+    }
+    .counter-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    /* Sections */
+    section {
+      max-width: 100%;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    section p {
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    /* Benefits List */
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits ul li {
+      background: #f2f2f2;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .cta-section a {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .cta-section a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Back link */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 20px;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      background-color: #003f5c;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Rimspiping</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#industries">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#clients">Client</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Design & Engineering</h1>
+    <p>Innovative Piping and Chemical Equipment Design</p>
+    <a href="contact.html">Get a Quote</a>
+  </div>
+<!-- Project Counter Section -->
+
+<!-- Counter Section First -->
+    <section class="section bg-light" id="counter" >
+      <div class="container-fluid text-center" style="margin-top: -50px;">
+        <h2 class="section-title">Projects Completed Successfully</h2>
+        <div class="row">
+          <div class="col-md-2 col-6" data-aos="fade-up">
+            <h2 class="counter" data-target="400">0</h2>
+            <p>Projects</p>
+          </div>
+          <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="counter" data-target="350000">0</h2>
+            <p>Inch-Size Thermoplastic Joints</p>
+          </div>
+          <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="counter" data-target="275000">0</h2>
+            <p>Thermoplastic Pipe Meter</p>
+          </div>
+          <div class="col-md-2 col-6" data-aos="fade-up">
+            <h2 class="counter" data-target="190000">0</h2>
+            <p>Plastic Inch Joints</p>
+          </div>
+          <div class="col-md-2 col-6" data-aos="fade-up">
+            <h2 class="counter" data-target="150000">0</h2>
+            <p>Plastic Inch Meter</p>
+          </div>
+          <div class="col-md-2 col-6" data-aos="fade-up">
+            <h2 class="counter" data-target="15">0</h2>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Overview Section -->
+  <section style="margin-top: -50px;">
+    <h2>Overview</h2>
+    <p>
+      At <strong>RimsPiping</strong>, we specialize in <strong>piping and chemical equipment design</strong>, 
+      <strong>piping supports</strong>, and <strong>shop fabrication</strong> using advanced 
+      <strong>3D modeling and CAD drawings</strong>.
+    </p>
+    <p>
+      Our design process follows industry-leading practices and tools, ensuring seamless integration 
+      between planning and execution. Through <strong>3D modeling</strong>, we can detect and eliminate 
+      potential design flaws, ensuring high accuracy and efficiency in every project.
+    </p>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits" style="margin-top: -50px;">
+    <h2>Our Capabilities</h2>
+    <ul>
+      <li>Comprehensive piping and equipment design using modern CAD tools.</li>
+      <li>3D modeling to visualize, plan, and mitigate design risks.</li>
+      <li>Shop fabrication with industry-standard quality checks.</li>
+      <li>Design solutions optimized for performance, safety, and durability.</li>
+    </ul>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section style="margin-top: -50px;">
+    <h2>Why Choose RimsPiping?</h2>
+    <p>
+      Our team of skilled engineers and designers ensures that every solution is practical, 
+      cost-effective, and built to meet the toughest industrial standards. 
+      We combine technical expertise with cutting-edge technology to deliver 
+      reliable designs for real-world challenges.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" style="margin-top: -50px;">
+  <p>Looking for expert piping design and engineering services?</p>
+  <a href="contact.html">Request a Quote</a>
+  </section>
+
+  <!-- Back to Services -->
+  <div class="back-link">
+    <a href="services.html">← Back to All Services</a>
+  </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; All rights reserved.</p>
+    <p>Designed by Saloni Rane | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    const runCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    };
+    let triggered = false;
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('#counter');
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (!triggered && sectionTop < windowHeight) {
+        runCounters();
+        triggered = true;
+      }
+    });
+  </script>
+</body>
+</html>
