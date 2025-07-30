@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>Rimspiping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Rimspiping</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fff;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
       color: #333;
-      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     .navbar {
       background-color: #00587A;
@@ -29,127 +29,91 @@
     .navbar-nav .nav-link:hover {
       color: #F2A007;
     }
-    .section {
-      padding: 60px 0;
+    /* Parallax Header */
+    .header {
+      background: url(cylindrical.jpg) center/cover no-repeat;
+      height: 40vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
     }
-    #about { background-color: #fefefe; }
-    #services { background-color: #f7f9fc; }
-    #testimonials { background-color: #fff; }
-    #clients { background-color: #f1f5f9; }
-    #gallery { background-color: #ffffff; }
-    #contact { background-color: #f7f7f7; }
 
+    .header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .header h1 {
+      position: relative;
+      font-size: 3.5rem;
+      z-index: 1;
+      animation: slideInDown 1.5s ease;
+      margin-top: -70px;
+    }
+
+    @keyframes slideInDown {
+      from {opacity: 0; transform: translateY(-100px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Floating Card */
+    .who-we-are {
+      max-width: 1100px;
+      margin: -100px auto 60px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(100px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .who-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .who-img img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #4e67eb;
+      box-shadow: 0 0 25px rgba(78,103,235,0.4);
+    }
+
+    .who-text {
+      flex: 2;
+    }
+
+    .who-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #4e67eb;
+    }
+
+    .who-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
     .section-title {
       color: #00587A;
       margin-bottom: 40px;
       text-align: center;
-    }
-  
-    .footer {
-      background-color: #003f5c;
-      color: #fff;
-      padding: 40px 0;
-      text-align: center;
-    }
-    .value-list li { list-style-type: none; margin: 5px 0; }
-    .about-wrapper {
-      position: relative;
-      background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
-      padding: 40px 0;
-      overflow: hidden;
-    }
-
-    .about-wrapper::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0,88,122,0.1), transparent 70%);
-      border-radius: 50%;
-      top: -150px;
-      left: -150px;
-      z-index: 0;
-    }
-    .about-wrapper::after {
-      content: "";
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(242,160,7,0.1), transparent 70%);
-      border-radius: 50%;
-      bottom: -100px;
-      right: -100px;
-      z-index: 0;
-    }
-
-    .about-section {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-      margin-bottom: 50px;
-      position: relative;
-      z-index: 1;
-    }
-    .about-section .image-container {
-      flex: 1 1 40%;
-      text-align: center;
-      position: relative;
-    }
-    .about-section .image-container::before {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle at center, #d9f0f5, #fff);
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0;
-    }
-    .about-section img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      position: relative;
-      z-index: 1;
-    }
-    .about-section .content {
-      flex: 1 1 55%;
-      background: #fff;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      z-index: 1;
-    }
-    .row-cols-md-3 > div {
-      margin-bottom: 30px;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-    @media (max-width: 768px) {
-      .about-section { flex-direction: column; }
-      .gallery-img { max-width: 100%; height: auto; margin-right: 10px; }
-      .row-cols-md-3 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .row-cols-md-3 > div {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-      .counter-row {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
     .counter-section {
       background-color: #f1f1f1;
@@ -172,11 +136,80 @@
       justify-content: center;
       gap: 20px;
     }
+    .footer {
+      background-color: #003f5c;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+    /* Animated Tiles */
+    .tiles {
+      max-width: 1100px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .tile {
+      background: #fff;
+      border-left: 6px solid #4e67eb;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInTile 1s ease forwards;
+    }
+
+    .tile:nth-child(2) { animation-delay: 0.3s; }
+    .tile:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeInTile {
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .tile h3 {
+      margin-top: 0;
+      color: #4e67eb;
+    }
+
+    .tile p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      background: #4e67eb;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .footer-cta h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .footer-cta p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .who-we-are { flex-direction: column; text-align: center; }
+      .who-img img { width: 200px; height: 200px; }
+    }
   </style>
 </head>
 <body>
-
-<!-- Navigation -->
+<div class="container-fluid text-center bg-success text-white">
+  <span class="glyphicon glyphicon-earphone"> +918956920400  |  </span>
+    <span class="glyphicon glyphicon-envelope">info@pipingwebsolutions.in </span>
+</div>
+    <!-- Navigation -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">Rimspiping</a>
@@ -197,6 +230,21 @@
     </div>
   </div>
 </nav>
+  <!-- Header -->
+  <section class="header">
+    <h1>About Us</h1>
+  </section>
+
+  <!-- Floating Who We Are -->
+  <section class="who-we-are">
+    <div class="who-img">
+      <img src="image.jpeg" alt="Founder Photo">
+    </div>
+    <div class="who-text">
+      <h2>Who We Are</h2>
+      <p>Built on the legacy of two established firms from 1994 and 2003, our company brings together over two decades of expertise in piping installation and tank fabrication. With a 110+ strong team and 800+ years of combined experience, we specialize in delivering reliable non-metallic piping solutions using advanced jointing methods like Socket Fusion, Butt Fusion, and Electro-Fusion. From modest beginnings to global reach, our growth is fueled by precision, quality, and a commitment to long-term partnerships.</p>
+    </div>
+  </section>
 <!-- Project Counter Section -->
 
 <!-- Counter Section First -->
@@ -231,63 +279,29 @@
         </div>
       </div>
     </section>
-
-<div class="container-fluid" id="a1" style="margin-top: -70px;">
-    <h1 class="section-title">About Us</h1>
-
-    <div class="about-section">
-        <div class="image-container">
-          <img src="image.jpeg" alt="Our Company">
-        </div>
-        <div class="content">
-          <h2 class="h4 text-primary mb-3">Who We Are</h2>
-          <p>Our company is the result of a powerful collaboration between two well-established firms, one founded in 1994 and the other in 2003. With over two decades of combined expertise in piping installation and tank fabrication, we bring unmatched experience, precision, and dedication to every project.</p>
-          <p>We specialize in the supply and installation of premium-quality plastic and thermoplastic piping systems including PP, PPH, and HDPE tanks and piping grids, tailored to industrial needs.</p>
-          <p>Our advanced jointing technologies—Socket Fusion, Butt Fusion, Electro-Fusion, IR Fusion, and BCF—ensure leak-proof and high-integrity systems.</p>
-        </div>
-      </div>
-        <p>
-          With a robust workforce of over <strong>110 professionals</strong> – including engineers, managers, CAD designers, and skilled technicians – we bring a combined experience of more than <strong>800 years</strong> to the table. Our certified welders and experienced tradespeople have been instrumental in planning, designing, supplying, and commissioning piping systems for diverse process and electromechanical industries, both domestically and internationally.
-        </p>
-        <p>
-          From a humble beginning over 13 years ago, our company has steadily evolved into a leading provider of non-metallic piping solutions. Our growth is driven by a deep understanding of market dynamics, a strong focus on quality, and a commitment to customer satisfaction.
-        </p>
-        <p>
-          At our core, we believe in building long-term partnerships through excellence, trust, and innovation.
-        </p>
-        <div class="row text-center">
-      <div class="col-md-4">
-        <img src="Picture1.png" alt="Mission Icon" class="mb-3">
-        <h4>Our Mission</h4>
-        <p>To deliver reliable, innovative, and sustainable plastic piping solutions that empower industries to operate safely and efficiently. We are committed to setting new standards through advanced technology and excellent service.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="Picture2.png" alt="Vision Icon" class="mb-3">
-        <h4>Our Vision</h4>
-        <p>To be the most trusted partner in industrial piping by setting benchmarks in quality, service, and environmental responsibility.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="Picture3.png" alt="Values Icon" class="mb-3">
-        <h4>Our Values</h4>
-        <ul class="value-list">
-          <li>✔ Integrity & Transparency</li>
-          <li>✔ Customer-Centric Approach</li>
-          <li>✔ Commitment to Safety</li>
-          <li>✔ Innovation & Excellence</li>
-          <li>✔ Sustainability & Responsibility</li>
-        </ul>
-      </div>
+  <!-- Mission, Vision, Values Tiles -->
+  <section class="tiles">
+    <div class="tile">
+      <h3>Our Mission</h3>
+      <p>To deliver reliable, innovative, and sustainable plastic piping solutions that empower industries to operate safely and efficiently. We are committed to setting new standards through advanced technology and excellent service.</p>
     </div>
-  </div>
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; All rights reserved.</p>
-    <p>Designed by Saloni Rane | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
-  </div>
-</footer>
+    <div class="tile">
+      <h3>Our Vision</h3>
+      <p>To be the most trusted partner in industrial piping by setting benchmarks in quality, service, and environmental responsibility.</p>
+    </div>
+    <div class="tile">
+      <h3>Our Values</h3>
+      <p>We believe in integrity, transparency, accountability, and continuous improvement — values that guide every step we take.</p>
+    </div>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer CTA -->
+  <section class="footer-cta">
+    <h2>Let’s Build the Future Together</h2>
+    <p>Join us on our mission to create meaningful impact through innovation and dedication.</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
